@@ -22,7 +22,7 @@ namespace Shop.Infrastructure.Repositories
             return await _collection.Find(predicate).ToListAsync();
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync()
+        public async Task<IEnumerable<T>> GetAllAsync() 
         {
             return await _collection.Find(Builders<T>.Filter.Empty).ToListAsync();
         }
